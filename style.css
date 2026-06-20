@@ -86,8 +86,13 @@ body {
 }
 
 @keyframes shine {
-    0% { transform: rotate(30deg) translate(-10%, -10%); }
-    100% { transform: rotate(30deg) translate(10%, 10%); }
+    0% {
+        transform: rotate(30deg) translate(-10%, -10%);
+    }
+
+    100% {
+        transform: rotate(30deg) translate(10%, 10%);
+    }
 }
 
 h1 {
@@ -105,8 +110,13 @@ h1 {
 }
 
 @keyframes textGlow {
-    from { filter: drop-shadow(0 0 5px rgba(var(--accent-color-rgb), 0.3)); }
-    to { filter: drop-shadow(0 0 15px rgba(var(--accent-color-rgb), 0.6)); }
+    from {
+        filter: drop-shadow(0 0 5px rgba(var(--accent-color-rgb), 0.3));
+    }
+
+    to {
+        filter: drop-shadow(0 0 15px rgba(var(--accent-color-rgb), 0.6));
+    }
 }
 
 .add-task {
@@ -140,7 +150,9 @@ h1 {
     transition: all 0.15s ease-in-out;
 }
 
-#new-task:focus::placeholder { opacity: 0.5; }
+#new-task:focus::placeholder {
+    opacity: 0.5;
+}
 
 #add-btn {
     color: #fff;
@@ -164,7 +176,9 @@ h1 {
     box-shadow: 0 5px 15px rgba(var(--accent-color-rgb), 0.35);
 }
 
-#add-btn:active { transform: translateY(1px); }
+#add-btn:active {
+    transform: translateY(1px);
+}
 
 /* Date and Time Pickers styling */
 .datatime-inputs {
@@ -201,7 +215,9 @@ h1 {
     transition: opacity 0.2s;
 }
 
-::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
 
 /* Priority Selector styling */
 .priority-selector-container {
@@ -250,8 +266,13 @@ h1 {
     user-select: none;
 }
 
-.priority-option:hover { color: var(--text-color); }
-.priority-option.active { color: #fff !important; }
+.priority-option:hover {
+    color: var(--text-color);
+}
+
+.priority-option.active {
+    color: #fff !important;
+}
 
 .priority-slider {
     position: absolute;
@@ -323,8 +344,13 @@ h1 {
 }
 
 @keyframes underlinegrow {
-    from { width: 0; }
-    to { width: 40%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40%;
+    }
 }
 
 /* Task List styling */
@@ -356,6 +382,7 @@ h1 {
         opacity: 0;
         transform: translateY(12px) scale(0.96);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -373,7 +400,9 @@ h1 {
     opacity: 0.7;
 }
 
-.task.completed:hover { opacity: 0.9; }
+.task.completed:hover {
+    opacity: 0.9;
+}
 
 .task-content {
     flex: 1;
@@ -404,7 +433,9 @@ h1 {
     gap: 4px;
 }
 
-.task-due-date i { font-size: 0.75rem; }
+.task-due-date i {
+    font-size: 0.75rem;
+}
 
 .task-actions {
     display: flex;
@@ -427,7 +458,9 @@ h1 {
     outline: none;
 }
 
-.task-btn:hover { transform: scale(1.1); }
+.task-btn:hover {
+    transform: scale(1.1);
+}
 
 .delete-btn:hover {
     background: rgba(255, 77, 77, 0.15);
@@ -464,8 +497,17 @@ h1 {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.2); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
 }
 
 /* Empty State styling */
@@ -487,11 +529,23 @@ h1 {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
-@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Custom Checkbox styling */
 .checkbox-container {
@@ -540,7 +594,9 @@ h1 {
     display: none;
 }
 
-.checkbox-container input:checked~.checkmark:after { display: block; }
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
 
 .checkbox-container .checkmark:after {
     left: 8px;
@@ -561,6 +617,7 @@ h1 {
     .container {
         padding: 1.25rem 1rem;
         border-radius: 12px;
+        width: 95%;
     }
 
     h1 {
@@ -573,7 +630,8 @@ h1 {
         gap: 0.6rem;
     }
 
-    .date-input, .time-input {
+    .date-input,
+    .time-input {
         width: 100%;
         padding: 0.75rem 1rem;
     }
@@ -584,7 +642,8 @@ h1 {
         gap: 0.8rem;
     }
 
-    .priority-options, .priority-option {
+    .priority-options,
+    .priority-option {
         width: 100%;
     }
 
@@ -596,4 +655,14 @@ h1 {
         padding: 0.4rem 0.85rem;
         font-size: 0.85rem;
     }
+
+    #add-btn {
+        width: 30%;
+        padding-left: 10px;
+        overflow: visible;
     }
+
+    #new-task {
+        width: 60%;
+    }
+}
